@@ -1,0 +1,24 @@
+{
+  "name": "MERN",
+  "version": "1.0.0",
+  "description": "learn MERN stack",
+  "main": "server.js",
+  "author": "gaoweijung",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  },
+  "scripts": {
+    "client-install": "yarn add --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  }
+}
